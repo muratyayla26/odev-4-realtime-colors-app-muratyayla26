@@ -24,10 +24,19 @@ export const sendColor = (color) => {
 };
 
 export const subscribeToColor = (cb) => {
-    if(!socket) return true;
+  if (!socket) return true;
 
-    socket.on("receive-color", (color)=>{
-        console.log("color received", color);
-        cb(color);
-    });
+  socket.on("receive-color", (color) => {
+    console.log("color received", color);
+    cb(color);
+  });
+};
+
+export const subscribeInitialColor = (cb) => {
+  if (!socket) return true;
+
+  socket.on("color-received", (data) => {
+    console.log("diger kullanicida redisten color received", data);
+    cb(data);
+  });
 };

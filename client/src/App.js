@@ -1,6 +1,12 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { initializeSocket, disconnectSocket, sendColor, subscribeToColor } from "./socketService";
+import {
+  initializeSocket,
+  disconnectSocket,
+  sendColor,
+  subscribeToColor,
+  subscribeInitialColor,
+} from "./socketService";
 
 function App() {
   const [color, setColor] = useState("#000");
@@ -12,9 +18,15 @@ function App() {
 
   useEffect(() => {
     initializeSocket();
+
+    subscribeInitialColor((data) => {
+      console.log("reactin icinde redistenb gelen", data);
+      setColor(data);
+    });
+
     subscribeToColor((color) => {
       setColor(color);
-    })
+    });
     return () => disconnectSocket();
   }, []);
 
