@@ -2,7 +2,7 @@
 
 [Live link of the project](https://zen-sinoussi-dc1b70.netlify.app)
 
-This application shows a color picker to set all client's pages color. Also initialize pages with latest chosen color from Redis.
+This application shows a color picker to set all client's pages color. Also initialize pages with the latest chosen color from Redis.
 Heroku and Netlify used for build and deployment.
 
 ## Technologies
