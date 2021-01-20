@@ -3,6 +3,11 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 const Colors = require("./clients/colors");
 let port = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.end("just get method");
+});
+
 io.on("connection", (socket) => {
   console.log("a user connected");
 

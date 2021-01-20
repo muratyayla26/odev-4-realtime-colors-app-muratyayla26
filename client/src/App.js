@@ -9,7 +9,7 @@ import {
 } from "./socketService";
 
 function App() {
-  const [color, setColor] = useState("#000");
+  const [color, setColor] = useState("#FFF");
 
   const submitHandler = (e) => {
     e.preventDefault();
