@@ -11,7 +11,7 @@ export const initializeSocket = () => {
 };
 
 export const disconnectSocket = () => {
-  console.log("disconnectiong...");
+  console.log("disconnecting...");
   if (socket) {
     socket.disconnect();
   }
@@ -36,7 +36,7 @@ export const subscribeInitialColor = (cb) => {
   if (!socket) return true;
 
   socket.on("color-received", (data) => {
-    console.log("diger kullanicida redisten color received", data);
+    console.log("color received from other client", data);
     cb(data);
   });
 };

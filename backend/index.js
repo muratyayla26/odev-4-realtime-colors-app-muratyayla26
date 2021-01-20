@@ -12,7 +12,7 @@ io.on("connection", (socket) => {
   console.log("a user connected");
 
   Colors.list((data) => {
-    console.log("redisten gelen", data);
+    console.log("data from redis", data);
     socket.emit("color-received", data);
   });
 

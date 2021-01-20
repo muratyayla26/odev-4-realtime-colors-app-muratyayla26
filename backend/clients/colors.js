@@ -12,7 +12,7 @@ Colors.prototype.upsert = function (color) {
 
 Colors.prototype.list = function (callback) {
   this.client.get("colorHex", function (err, reply) {
-    console.log("cevapppp", reply);
+    //console.log("reply from redis", reply);
     return callback(reply);
   });
 };

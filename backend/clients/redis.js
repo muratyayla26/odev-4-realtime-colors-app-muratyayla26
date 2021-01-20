@@ -4,8 +4,8 @@ const getClient = () => {
 };
 module.exports.getClient = getClient;
 
-/*
+/* redis port for local environment
 {
     host: "localhost",
     port: 6379,
-  }*/
+}*/

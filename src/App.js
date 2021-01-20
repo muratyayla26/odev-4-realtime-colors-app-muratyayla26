@@ -20,7 +20,7 @@ function App() {
     initializeSocket();
 
     subscribeInitialColor((data) => {
-      console.log("reactin icinde redistenb gelen", data);
+      console.log("color from redis logged in react", data);
       setColor(data);
     });
 
